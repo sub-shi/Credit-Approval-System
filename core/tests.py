@@ -11,8 +11,8 @@ class APITestCase(TestCase):
         self.customer = Customer.objects.create(
             first_name="Test",
             last_name="User",
-            age=30,
-            phone_number=9999999999,
+            age=21,
+            phone_number=8093707370,
             monthly_salary=50000,
             approved_limit=1800000
         )
@@ -20,11 +20,11 @@ class APITestCase(TestCase):
     def test_register_customer(self):
         url = reverse('register')
         data = {
-            "first_name": "John",
-            "last_name": "Doe",
+            "first_name": "Ana",
+            "last_name": "Mesa",
             "age": 25,
             "monthly_income": 40000,
-            "phone_number": "1234567890"
+            "phone_number": "9953004088",
         }
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -71,8 +71,8 @@ class APITestCase(TestCase):
             interest_rate=12,
             monthly_repayment=10000,
             emis_paid_on_time=0,
-            start_date='2025-01-01',
-            end_date='2026-01-01'
+            start_date='2024-06-01',
+            end_date='2025-06-01'
         )
         url = reverse('view-loan-details', kwargs={'loan_id': loan.id})
         response = self.client.get(url, format='json')
