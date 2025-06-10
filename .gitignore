@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.env
+.env
+.venv/
+venv/
+ENV/
+env/
+*.sqlite3
+
+# Django
+db.sqlite3
+*.log
+*.tmp
+*.orig
+*.pid
+*.seed
+media/
+static/
+staticfiles/
+local_settings.py
+
+# Optional: ignore Django migrations if you don't want them in VCS
+# core/migrations/
+# */migrations/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Docker
+*.bak
+*.swp
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
