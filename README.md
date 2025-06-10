@@ -114,6 +114,18 @@ This is a Django-based Credit Approval System with REST APIs for customer regist
 
 ---
 
+## Running Tests
+
+To run the automated API tests, use:
+
+```sh
+python manage.py test core
+```
+
+This will run all tests in `core/tests.py` and verify that your API endpoints are working as expected.
+
+---
+
 ## License
 
 This project is for educational/demo purposes.
