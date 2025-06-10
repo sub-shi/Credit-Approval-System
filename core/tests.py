@@ -8,7 +8,6 @@ class APITestCase(TestCase):
 
     def setUp(self):
         self.client = APIClient()
-        # Pre-create a customer for test purposes
         self.customer = Customer.objects.create(
             first_name="Test",
             last_name="User",
@@ -65,7 +64,6 @@ class APITestCase(TestCase):
             self.loan_id = None
 
     def test_view_loan_details(self):
-        # First create a loan
         loan = Loan.objects.create(
             customer=self.customer,
             loan_amount=100000,
@@ -83,8 +81,7 @@ class APITestCase(TestCase):
         self.assertIn('customer', response.data)
 
     def test_view_loans_by_customer(self):
-        # Create multiple loans
-        for _ in range(2):
+        for _ in range(2):                            # CREATING MULTIPLE LOANS FOR THE SAME CUSTOMER
             Loan.objects.create(
                 customer=self.customer,
                 loan_amount=50000,
